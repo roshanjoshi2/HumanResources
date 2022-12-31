@@ -1,0 +1,42 @@
+﻿@model List<Employee>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <table class="table">
+        <thead>
+            <tr>
+               
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>JoinDate</th>
+                <th>Deaprtment</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.ID</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.Address</td>
+                    <td>@employee.Gender</td>
+                    <td>@employee.Dob?.ToString("MMMM,DD,YYYY")</td>
+                    <td>@employee.JoinDate.ToString("MMMM,DD,YYYY")</td>
+                    <td>@employee.Department</td>
+                    <td>@employee.Designation</td>
+
+                </tr>
+
+
+            }
+
+
+        </tbody>
+    </table>
+}
