@@ -14,11 +14,14 @@ namespace HumanResources.Models
 
         public string? Address { get; set; }
 
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+        public DateTime? Dob { get; set; }
 
         public Gender? Gender { get; set; }
 
-        public DateTime? Dob { get; set; }
+        
 
         public DateTime JoinDate { get; set; }
 

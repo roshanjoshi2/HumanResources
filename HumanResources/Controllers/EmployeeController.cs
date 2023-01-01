@@ -11,5 +11,10 @@ namespace HumanResources.Controllers
             var employees  = db.Employees.ToList();
             return View(employees);
         }
+
+        public IActionResult Add()
+        {
+            return View();  
+        }
     }
 }
