@@ -6,73 +6,149 @@
 *@
 @{
 
-    <form>
-        <div class="form-group mb-4">
-            <label for="exampleInputEmail1">Name</label>
-            <input asp-for="Name" type="Name" class="form-control" aria-describedby="emailHelp" placeholder="Enter Name">
+    //<form action="/employee/add" method="post">
+    //    <div class="form-group mb-4">
+    //        <label for="exampleInputEmail1">Name</label>
+    //        <input asp-for="Name" type="Name" class="form-control" aria-describedby="emailHelp" placeholder="Enter Name">
 
-        </div>
-        <div class="form-group mb-4">
-            <label for="exampleInputEmail1">Email address</label>
-            <input asp-for="Email" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Email">
+    //    </div>
+    //    <div class="form-group mb-4">
+    //        <label for="exampleInputEmail1">Email address</label>
+    //        <input asp-for="Email" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Email">
            
-        </div>
+    //    </div>
 
-        <div class="form-group mb-4 ">
-            <label for="exampleInputEmail1">Gender</label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Gender"  id= "Male" value="@Gender.Male" checked>
-                <label class="form-check-label" for="Male">
-                   Male
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Gender" id="Female" value="@Gender.Female" checked>
-                <label class="form-check-label" for="Female">
-                    Female
-                </label>
-            </div>
+    //    <div class="form-group mb-4 ">
+    //        <label for="exampleInputEmail1">Gender</label>
+    //        <div class="form-check">
+    //            <input class="form-check-input" type="radio" name="Gender"  id= "Male" value="@Gender.Male" checked>
+    //            <label class="form-check-label" for="Male">
+    //               Male
+    //            </label>
+    //        </div>
+    //        <div class="form-check">
+    //            <input class="form-check-input" type="radio" name="Gender" id="Female" value="@Gender.Female" checked>
+    //            <label class="form-check-label" for="Female">
+    //                Female
+    //            </label>
+    //        </div>
            
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Gender" id= "Others" value="@Gender.Other" checked>
-                <label class="form-check-label" for="Others">
-                    Other
-                </label>
-            </div>
+    //        <div class="form-check">
+    //            <input class="form-check-input" type="radio" name="Gender" id= "Others" value="@Gender.Other" checked>
+    //            <label class="form-check-label" for="Others">
+    //                Other
+    //            </label>
+    //        </div>
 
-        </div>
-        <div class="form-group mb-4">
-            <label asp-for="Address" for="exampleInputEmail1">Address</label>
-            <textarea rows="3" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email"> </textarea>
+    //    </div>
+    //    <div class="form-group mb-4">
+    //    <label asp-for="Address" >Address</label>
+    //    <textarea asp-for="Address" rows="3" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Email"> </textarea>
            
 
+    //    </div>
+    //    <div class="form-group mb-4">
+    //        <label asp-for="JoinDate"></label>
+    //        <input asp-for="JoinDate" class="form-control">
+
+    //    </div>
+    //    <div class="form-group mb-4">
+    //        <label asp-for="Dob"></label>
+    //        <input asp-for="Dob"class="form-control" >
+
+    //    </div>
+    //    <div class="form-group mb-4">
+    //        <label asp-for="Department"></label>
+    //        <input asp-for="Department"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Department">
+
+    //    </div>
+
+    //    <div class="form-group mb-4">
+    //        <label asp-for="Designation"></label>
+    //        <input asp-for="Designation" class="form-control" aria-describedby="emailHelp" placeholder="Enter Designation">
+
+    //    </div>
+
+    //    <button type="submit" class="btn btn-primary">Submit</button>
+    //</form>
+    <div class="card bg-warning">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <form action="/employee/add" method="post">
+                        <div class="form-group mb-4">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input asp-for="Name" type="Name" class="form-control" aria-describedby="emailHelp" placeholder="Enter Name">
+
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input asp-for="Email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter Email">
+
+                        </div>
+
+                        <div class="form-group mb-4 ">
+                            <label for="exampleInputEmail1">Gender</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Gender" id="Male" value="@Gender.Male" checked>
+                                <label class="form-check-label" for="Male">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Gender" id="Female" value="@Gender.Female" checked>
+                                <label class="form-check-label" for="Female">
+                                    Female
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Gender" id="Others" value="@Gender.Other" checked>
+                                <label class="form-check-label" for="Others">
+                                    Other
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="Address">Address</label>
+                            <textarea asp-for="Address" rows="3" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter Email"> </textarea>
+
+
+                        </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="JoinDate"></label>
+                            <input asp-for="JoinDate" class="form-control">
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm">
+                    <form action="/employee/add" method="post">
+
+                        <div class="form-group mb-4">
+                            <label asp-for="Dob"></label>
+                            <input asp-for="Dob" class="form-control">
+
+                        </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="Department"></label>
+                            <input asp-for="Department" class="form-control" aria-describedby="emailHelp" placeholder="Enter Department">
+
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label asp-for="Designation"></label>
+                            <input asp-for="Designation" class="form-control" aria-describedby="emailHelp" placeholder="Enter Designation">
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+            </div>
         </div>
-        <div class="form-group mb-4">
-            <label asp-for="JoinDate"></label>
-            <input asp-for="JoinDate" class="form-control">
-
-        </div>
-        <div class="form-group mb-4">
-            <label asp-for="Dob"></label>
-            <input asp-for="Dob"class="form-control" >
-
-        </div>
-        <div class="form-group mb-4">
-            <label asp-for="Department"></label>
-            <input asp-for="Department"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Department">
-
-        </div>
-
-        <div class="form-group mb-4">
-            <label asp-for="Designation"></label>
-            <input asp-for="Designation" class="form-control" aria-describedby="emailHelp" placeholder="Enter Designation">
-
-        </div>
-
-
-      
-       
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
+    
 }

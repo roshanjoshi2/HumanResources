@@ -46,7 +46,7 @@ namespace HumanResources.Controllers
                             ID = reader.GetInt32(0),
                             Name = reader.GetString(1),
                             Address = reader.GetString(2),
-                            //Gender = (Gender)reader.GetInt32(3),
+                            Gender = (Gender)reader.GetInt32(3),
                             Dob = reader.GetDateTime(4)
                         };
                         employees.Add(emp); 
@@ -63,10 +63,7 @@ namespace HumanResources.Controllers
                 return View(employees);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
